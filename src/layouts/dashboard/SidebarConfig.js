@@ -19,19 +19,8 @@ const sidebarConfig = [
   },
   {
     title: 'SpeciaAI',
-    path: '/dashboard/products',
+    path: '/dashboard/specia',
     icon: getIcon(messageSquareFill)
-  }
-  /*
-  {
-    title: 'user',
-    path: '/dashboard/user',
-    icon: getIcon(peopleFill)
-  },
-  {
-    title: 'blog',
-    path: '/dashboard/blog',
-    icon: getIcon(fileTextFill)
   },
   {
     title: 'login',
@@ -43,12 +32,6 @@ const sidebarConfig = [
     path: '/register',
     icon: getIcon(personAddFill)
   },
-  {
-    title: 'Not found',
-    path: '/404',
-    icon: getIcon(alertTriangleFill)
-  }
-  */
 ];
 
 export default sidebarConfig;

@@ -117,13 +117,13 @@ export default function ShopFilterSidebar({
                     {FILTER_GENDER_OPTIONS.map((item) => (
                       <FormControlLabel
                         key={item}
-                        control={
+                        control={(
                           <Checkbox
                             {...getFieldProps('gender')}
                             value={item}
                             checked={values.gender.includes(item)}
                           />
-                        }
+                        )}
                         label={item}
                       />
                     ))}
@@ -179,14 +179,14 @@ export default function ShopFilterSidebar({
                       <FormControlLabel
                         key={item}
                         value={item}
-                        control={
+                        control={(
                           <Radio
                             disableRipple
                             color="default"
                             icon={<Rating readOnly value={4 - index} />}
                             checkedIcon={<Rating readOnly value={4 - index} />}
                           />
-                        }
+                        )}
                         label="& Up"
                         sx={{
                           my: 0.5,

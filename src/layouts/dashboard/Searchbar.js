@@ -67,7 +67,7 @@ export default function Searchbar() {
               fullWidth
               disableUnderline
               placeholder="Search…"
-              startAdornment={
+              startAdornment={(
                 <InputAdornment position="start">
                   <Box
                     component={Icon}
@@ -75,7 +75,7 @@ export default function Searchbar() {
                     sx={{ color: 'text.disabled', width: 20, height: 20 }}
                   />
                 </InputAdornment>
-              }
+              )}
               sx={{ mr: 1, fontWeight: 'fontWeightBold' }}
             />
             <Button variant="contained" onClick={handleClose}>

@@ -22,8 +22,7 @@ function IconColor({ sx, ...other }) {
         alignItems: 'center',
         justifyContent: 'center',
         bgcolor: 'currentColor',
-        transition: (theme) =>
-          theme.transitions.create('all', {
+        transition: (theme) => theme.transitions.create('all', {
             duration: theme.transitions.duration.shortest
           }),
         ...sx
@@ -54,7 +53,7 @@ export default function ColorManyPicker({ colors, onChecked, sx, ...other }) {
             value={color}
             color="default"
             checked={onChecked(color)}
-            icon={
+            icon={(
               <IconColor
                 sx={{
                   ...(isWhite && {
@@ -62,8 +61,8 @@ export default function ColorManyPicker({ colors, onChecked, sx, ...other }) {
                   })
                 }}
               />
-            }
-            checkedIcon={
+            )}
+            checkedIcon={(
               <IconColor
                 sx={{
                   transform: 'scale(1.4)',
@@ -84,7 +83,7 @@ export default function ColorManyPicker({ colors, onChecked, sx, ...other }) {
                   })
                 }}
               />
-            }
+            )}
             sx={{
               color,
               '&:hover': { opacity: 0.72 }

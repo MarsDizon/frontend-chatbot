@@ -38,7 +38,7 @@ function TaskItem({ task, checked, formik, ...other }) {
         control={
           <Checkbox {...getFieldProps('checked')} value={task} checked={checked} {...other} />
         }
-        label={
+        label={(
           <Typography
             variant="body2"
             sx={{
@@ -50,7 +50,7 @@ function TaskItem({ task, checked, formik, ...other }) {
           >
             {task}
           </Typography>
-        }
+        )}
       />
     </Stack>
   );

@@ -58,11 +58,11 @@ function OrderItem({ item, isLast }) {
         <TimelineDot
           sx={{
             bgcolor:
-              (type === 'order1' && 'primary.main') ||
-              (type === 'order2' && 'success.main') ||
-              (type === 'order3' && 'info.main') ||
-              (type === 'order4' && 'warning.main') ||
-              'error.main'
+              (type === 'order1' && 'primary.main')
+              || (type === 'order2' && 'success.main')
+              || (type === 'order3' && 'info.main')
+              || (type === 'order4' && 'warning.main')
+              || 'error.main'
           }}
         />
         {isLast ? null : <TimelineConnector />}

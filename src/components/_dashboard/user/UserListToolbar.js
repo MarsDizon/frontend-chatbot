@@ -57,18 +57,20 @@ export default function UserListToolbar({ numSelected, filterName, onFilterName 
     >
       {numSelected > 0 ? (
         <Typography component="div" variant="subtitle1">
-          {numSelected} selected
+          {numSelected}
+          {' '}
+          selected
         </Typography>
       ) : (
         <SearchStyle
           value={filterName}
           onChange={onFilterName}
           placeholder="Search user..."
-          startAdornment={
+          startAdornment={(
             <InputAdornment position="start">
               <Box component={Icon} icon={searchFill} sx={{ color: 'text.disabled' }} />
             </InputAdornment>
-          }
+          )}
         />
       )}
 

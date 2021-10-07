@@ -86,7 +86,9 @@ function renderContent(notification) {
     <Typography variant="subtitle2">
       {notification.title}
       <Typography component="span" variant="body2" sx={{ color: 'text.secondary' }}>
-        &nbsp; {noCase(notification.description)}
+        &nbsp;
+        {' '}
+        {noCase(notification.description)}
       </Typography>
     </Typography>
   );
@@ -147,7 +149,7 @@ function NotificationItem({ notification }) {
       </ListItemAvatar>
       <ListItemText
         primary={title}
-        secondary={
+        secondary={(
           <Typography
             variant="caption"
             sx={{
@@ -160,7 +162,7 @@ function NotificationItem({ notification }) {
             <Box component={Icon} icon={clockFill} sx={{ mr: 0.5, width: 16, height: 16 }} />
             {formatDistanceToNow(new Date(notification.createdAt))}
           </Typography>
-        }
+        )}
       />
     </ListItemButton>
   );
@@ -217,7 +219,11 @@ export default function NotificationsPopover() {
           <Box sx={{ flexGrow: 1 }}>
             <Typography variant="subtitle1">Notifications</Typography>
             <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-              You have {totalUnRead} unread messages
+              You have
+              {' '}
+              {totalUnRead}
+              {' '}
+              unread messages
             </Typography>
           </Box>
 
@@ -235,11 +241,11 @@ export default function NotificationsPopover() {
         <Scrollbar sx={{ height: { xs: 340, sm: 'auto' } }}>
           <List
             disablePadding
-            subheader={
+            subheader={(
               <ListSubheader disableSticky sx={{ py: 1, px: 2.5, typography: 'overline' }}>
                 New
               </ListSubheader>
-            }
+            )}
           >
             {notifications.slice(0, 2).map((notification) => (
               <NotificationItem key={notification.id} notification={notification} />
@@ -248,11 +254,11 @@ export default function NotificationsPopover() {
 
           <List
             disablePadding
-            subheader={
+            subheader={(
               <ListSubheader disableSticky sx={{ py: 1, px: 2.5, typography: 'overline' }}>
                 Before that
               </ListSubheader>
-            }
+            )}
           >
             {notifications.slice(2, 5).map((notification) => (
               <NotificationItem key={notification.id} notification={notification} />

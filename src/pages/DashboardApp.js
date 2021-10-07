@@ -1,5 +1,6 @@
 // material
-import { Box, Grid, Container, Typography } from '@mui/material';
+import { Box, Card, CardContent, Grid, Container, Typography } from '@mui/material';
+import React from 'react';
 // components
 import Page from '../components/Page';
 import {
