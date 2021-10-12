@@ -24,9 +24,8 @@ const useStyles = makeStyles(() => ({
   loading: {
     position: "relative",
     alignSelf: "center",
-    display: "inline-block",
   },
-  bubbleRight: {
+  user: {
     color: "black",
     fontSize: "15px",
     maxWidth: "90%",
@@ -34,12 +33,10 @@ const useStyles = makeStyles(() => ({
     borderRadius: "15px",
     position: "relative",
     alignSelf: "flex-end",
-    display: "inline-block",
-    backgroundAttachment: "fixed",
     backgroundColor: "#fff",
     boxShadow: "0px 2px 3px grey"
   },
-  bubbleLeft: {
+  specia: {
     color: "white",
     fontSize: "15px",
     maxWidth: "90%",
@@ -47,8 +44,6 @@ const useStyles = makeStyles(() => ({
     borderRadius: "15px",
     position: "relative",
     alignSelf: "flex-start",
-    display: "inline-block",
-    backgroundAttachment: "fixed",
     backgroundColor: "#007AFF",
     boxShadow: "0px 2px 3px grey"
   }
@@ -118,10 +113,10 @@ export default function ChatBot() {
                   <Grid item
                     className={`${
                     message.user === "SpecIA" || message.user === "Error"
-                      ? classes.bubbleLeft
+                      ? classes.specia
                       : message.user === "Loading"
                       ? classes.loading
-                      : classes.bubbleRight 
+                      : classes.user 
                     }`}
                     key={idx}
                     style={{ display: "flex", alignItems: "center", bottom: "0" }}
