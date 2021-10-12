@@ -67,6 +67,7 @@
     "no-multi-spaces": 0,
     "react/jsx-equals-spacing": 0,
     "react-hooks/exhaustive-deps": 0,
+    "react/jsx-first-prop-new-line": 0,
     "no-unused-vars": [
       1,
       {

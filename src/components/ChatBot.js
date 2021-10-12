@@ -110,13 +110,12 @@ export default function ChatBot() {
     <div>
     
     <Card style={{ backgroundColor: "#fafafa", overflow: "hidden", borderBottomLeftRadius: "0", borderBottomRightRadius: "0" }} display="inline-block">
-      <Scrollbar style={{ height: "450px", bottom: "0" }}>
+      <Scrollbar style={{ height: "450px" }}>
         <CardContent>
             <Grid container direction="column">
               {messages.map((message, idx) => {
                 return (
-                  <Grid 
-                    item
+                  <Grid item
                     className={`${
                     message.user === "SpecIA" || message.user === "Error"
                       ? classes.bubbleLeft
@@ -164,35 +163,39 @@ export default function ChatBot() {
         </CardContent>
       </Scrollbar>
     </Card>
+
+    {/* Microphone Component */}
     <Card style={{ backgroundColor: "#fafafa", borderTopLeftRadius: "0", borderTopRightRadius: "0" }} display="inline-block">
+
+      {/* Caption to let user know if microphone is recording */}
       <div style={{ display: "flex", justifyContent: "center", fontSize: "14px", paddingTop: "10px" }}>
         {listening ? "Recording..." : "Microphone is off"}
       </div>
+
+      {/* Toggle Microphone Recording On and Off */}
       <CardContent style={{ display: "flex", justifyContent: "center" }}>
         <div style={{ marginRight: "15px" }}>
         {listening 
           ?
           <Tooltip title="Press to mute the recording"> 
             <IconButton
-            className={`text-white ${listening ? "bg-danger" : "bg-success"}`}
-            onClick={SpeechRecognition.stopListening}>
-              <div style={{ color: "#00AB55" }}>
-                <Icon icon={micFill} width="40px" height="40px" />
-              </div>
+              className={`text-white ${listening ? "bg-danger" : "bg-success"}`}
+              onClick={SpeechRecognition.stopListening}>
+                <Icon icon={micFill} width="40px" height="40px" style={{ color: "#00AB55" }} />
             </IconButton>
           </Tooltip>
           :
           <Tooltip title="Press to start recording">
             <IconButton
-            className={`text-white ${listening ? "bg-danger" : "bg-success"}`}
-            onClick={SpeechRecognition.startListening}>
-              <div style={{ color: "#FF4842" }}>
-                <Icon icon={micOffOutline} width="40px" height="40px" />
-              </div>
+              className={`text-white ${listening ? "bg-danger" : "bg-success"}`}
+              onClick={SpeechRecognition.startListening}>
+                <Icon icon={micOffOutline} style={{ color: "#FF4842" }} width="40px" height="40px" />
             </IconButton>
           </Tooltip>
         }
         </div>
+
+        {/* User Tooltip over Icons */}
         <Tooltip title="Reset">
             <IconButton
             className={`text-white ${listening ? "bg-danger" : "bg-success"}`}
