@@ -1,7 +1,7 @@
 import faker from 'faker';
 import PropTypes from 'prop-types';
 // material
-import { Card, Typography, CardHeader, CardContent } from '@mui/material';
+import { Card, Typography, CardContent } from '@mui/material';
 import {
   Timeline,
   TimelineItem,
@@ -77,7 +77,7 @@ function OrderItem({ item, isLast }) {
   );
 }
 
-export default function AppOrderTimeline() {
+export default function TaskHistory() {
   return (
     <Card
       sx={{
@@ -86,7 +86,6 @@ export default function AppOrderTimeline() {
         }
       }}
     >
-      <CardHeader title="Task History" />
       <CardContent>
         <Timeline>
           {TIMELINES.map((item, index) => (

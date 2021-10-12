@@ -1,16 +1,10 @@
-import PropTypes from 'prop-types';
-import { Icon } from '@iconify/react';
-import menu2Fill from '@iconify/icons-eva/menu-2-fill';
-// material
+// Material UI
 import { alpha, styled } from '@mui/material/styles';
-import { Box, Stack, AppBar, Toolbar, IconButton } from '@mui/material';
-// components
-import { MHidden } from '../../components/@material-extend';
-//
-import Searchbar from './Searchbar';
+import { Box, Stack, AppBar, Toolbar,  } from '@mui/material';
+
+// Components
 import AccountPopover from './AccountPopover';
 import LanguagePopover from './LanguagePopover';
-import NotificationsPopover from './NotificationsPopover';
 
 // ----------------------------------------------------------------------
 
@@ -38,11 +32,7 @@ const ToolbarStyle = styled(Toolbar)(({ theme }) => ({
 
 // ----------------------------------------------------------------------
 
-DashboardNavbar.propTypes = {
-  onOpenSidebar: PropTypes.func
-};
-
-export default function DashboardNavbar({ onOpenSidebar }) {
+export default function DashboardNavbar() {
   return (
     <RootStyle>
       <ToolbarStyle>
