@@ -1,8 +1,6 @@
 ## Spectar Chatbot
 
-## General Information
-
-This project is a simple frontend proof-of-concept of an AI Chatbot.
+This project is a simple frontend of an AI Chatbot.
 
 ## Getting started
 
