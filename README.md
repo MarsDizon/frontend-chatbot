@@ -4,7 +4,7 @@ This project is a frontend for an AI Chatbot that captures the vocal input of th
 
 The RASA backend is offline and this repo is purely a client-side proof-of-concept.
 
-- [spectar-frontend-chatbot.netlify.app](https://spectar-frontend-chatbot.netlify.app/)
+[spectar-frontend-chatbot.netlify.app](https://spectar-frontend-chatbot.netlify.app/)
 
 ## Getting started
 
