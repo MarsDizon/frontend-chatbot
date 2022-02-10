@@ -85,7 +85,7 @@ export default function ChatBot() {
         const newMessages = [...messages];
         newMessages[messages.length - 1] = {
           user: "Error",
-          message: "Error getting a response from the server.",
+          message: "RASA AI currently offline.",
         };
         return newMessages;
       });

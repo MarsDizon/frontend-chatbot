@@ -2,10 +2,6 @@
 import { alpha, styled } from '@mui/material/styles';
 import { Box, Stack, AppBar, Toolbar,  } from '@mui/material';
 
-// Components
-import AccountPopover from './AccountPopover';
-import LanguagePopover from './LanguagePopover';
-
 // ----------------------------------------------------------------------
 
 const DRAWER_WIDTH = 280;
@@ -38,10 +34,7 @@ export default function DashboardNavbar() {
       <ToolbarStyle>
         <Box sx={{ flexGrow: 1 }} />
 
-        <Stack direction="row" alignItems="center" spacing={{ xs: 0.5, sm: 1.5 }}>
-          <LanguagePopover />
-          <AccountPopover />
-        </Stack>
+        <Stack direction="row" alignItems="center" spacing={{ xs: 0.5, sm: 1.5 }} />
       </ToolbarStyle>
     </RootStyle>
   );
